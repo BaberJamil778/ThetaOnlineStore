@@ -6,13 +6,15 @@
     <title>@ViewData["Title"] - ThetaOnlineStore</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
     
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
     <header>
 
-       
+
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
             <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">ThetaOnlineStore</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,8 +45,34 @@
         </nav>
     </header>
     <div class="container">
+
+
+
+
         <main role="main" class="pb-3">
-            @RenderBody()
+
+            <div class="row">
+                <div class="col-md-3" style="border-right:solid">
+
+                    <ul class="list-group">
+                        <
+                        <li class="list-group-item list-group-item-primary"><a>Dashboard</a></li></a>
+                        <li class="list-group-item list-group-item-primary"><a href="/Categories/Create">Add New Category</a></li>
+                        <li class="list-group-item list-group-item-primary"><a href="/Categories/Index">Search Category </a></li>
+                        <li class="list-group-item list-group-item-primary"><a href="/Products/Create">Add new Product</a></li>
+                        <li class="list-group-item list-group-item-primary"><a href="/Products/Index">Search Products</a></li>
+                        <li class="list-group-item list-group-item-primary"><a href="/SystemUsers/Register">Add System User</a></li>
+                        <li class="list-group-item list-group-item-primary"><a href="/SystemUsers/AllSystemUsers">Search System User</a></li>
+
+                    </ul>
+                </div>
+                <div class="col-md-9">
+                    @RenderBody()
+
+                </div>
+
+            </div>
+
         </main>
     </div>
 
@@ -55,6 +83,9 @@
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="//cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    
     <script src="~/js/site.js" asp-append-version="true"></script>
     @RenderSection("Scripts", required: false)
 </body>
